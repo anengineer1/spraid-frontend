@@ -1,6 +1,5 @@
-# Welcome to Remix!
-
-- 📖 [Remix docs](https://remix.run/docs)
+# spraid-frontend
+the frontend for the spraid backend
 
 ## Development
 
