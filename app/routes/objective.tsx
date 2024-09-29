@@ -1,5 +1,4 @@
-import { Button } from "@material-tailwind/react";
-import { json, NavLink, useLoaderData } from "@remix-run/react";
+import { json, NavLink, Outlet, useLoaderData } from "@remix-run/react";
 import { base_url } from "~/fetch_settings"
 
 export const loader = async () => {
@@ -16,7 +15,7 @@ export const loader = async () => {
 
 function ObjectiveBubble(objective: Objective) {
 	return (
-		<NavLink className="relative m-8" to="/" >
+		<NavLink className="relative m-8" to={`/objective/${objective.id}`} >
 			<div className="absolute -inset-1">
 				<div
 					className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600">
@@ -45,6 +44,7 @@ export default function SelectObjective() {
 	return (
 		<div className="grid max-w-4xl lg:max-w-6xl grid-cols-1 mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-3 sm:mt-12 lg:mt-20 sm:text-left">
 			{objectives.map((objective) => <ObjectiveBubble id={objective.id} name={objective.name} />)}
+			<Outlet />
 		</div>
 	)
 }
