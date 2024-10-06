@@ -1,8 +1,8 @@
 interface Raid {
 	id: number;
 	name: string;
-	execution_at_time: Date;
-	finished_at_time: Date;
+	executionAtTime: string;
+	finishedAtTime: string;
 	lead: string;
 	objective: Objective;
 }

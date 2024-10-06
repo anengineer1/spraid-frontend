@@ -68,7 +68,7 @@ export default function App() {
 
 			<SideBar />
 
-			<div className="fixed top-16 left-16 h-screen m-0 flex flex-col bg-white-900">
+			<div className="fixed left-16 top-16 h-screen m-0 flex flex-col bg-white-900 overflow-auto">
 				<Outlet />
 			</div>
 		</div>
