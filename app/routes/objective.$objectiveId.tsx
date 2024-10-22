@@ -7,7 +7,7 @@ export const objectiveUpdateURL = base_url + "objective/";
 
 
 export const action = async ({ params, request }: ActionFunctionArgs) => {
-	console.log("Handling Form");
+	console.log("Handling Objective Form");
 	invariant(params.objectiveId, "Missing objectiveId parameter");
 	const objectiveId = params.objectiveId;
 
